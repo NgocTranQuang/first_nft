@@ -6,6 +6,7 @@ type Data = {
   title: string,
   type: any,
   properties: any,
+  image_url: string,
   name: string,
   tokenId: string
 }
@@ -24,6 +25,7 @@ export default function handler(
     title: "Asset Metadata",
     name: "nftn",
     type: "object",
+    image_url: `${host}/nft/Floki-${id_image}.png`,
     properties: {
       name: {
         "type": "string",
@@ -38,7 +40,8 @@ export default function handler(
         "description": `${host}/nft/Floki-${id_image}.png`
       }
     },
-    tokenId: `${id}`
+    tokenId: `${id}`,
+
 
   })
 }
