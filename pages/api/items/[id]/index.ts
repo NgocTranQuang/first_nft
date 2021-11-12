@@ -8,7 +8,8 @@ type Data = {
   properties: any,
   image_url: string,
   name: string,
-  tokenId: string
+  tokenId: string,
+  description: string
 }
 
 export default function handler(
@@ -26,18 +27,19 @@ export default function handler(
     name: "nftn",
     type: "object",
     image_url: `${host}/nft/Floki-${id_image}.png`,
+    description: 'nfft',
     properties: {
       name: {
-        "type": "string",
-        "description": "Identifies the asset to which this NFT represents"
+        type: "string",
+        description: "Identifies the asset to which this NFT represents"
       },
-      "description": {
-        "type": "string",
-        "description": "Describes the asset to which this NFT represents"
+      description: {
+        type: "string",
+        description: "Describes the asset to which this NFT represents"
       },
-      "image": {
-        "type": "string",
-        "description": `${host}/nft/Floki-${id_image}.png`
+      image: {
+        type: "string",
+        description: `${host}/nft/Floki-${id_image}.png`
       }
     },
     tokenId: `${id}`,
