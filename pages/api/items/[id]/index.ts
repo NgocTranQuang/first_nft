@@ -6,6 +6,7 @@ type Data = {
   title: string,
   type: any,
   properties: any,
+  name: string,
   tokenId: string
 }
 
@@ -21,6 +22,7 @@ export default function handler(
 
   res.status(200).json({
     title: "Asset Metadata",
+    name: "nftn",
     type: "object",
     properties: {
       name: {
